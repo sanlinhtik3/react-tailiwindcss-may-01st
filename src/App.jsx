@@ -1,28 +1,20 @@
-import { createContext } from "react";
-import About from "./About";
-import Home from "./Home";
-import { Route, Routes } from "react-router-dom";
-import Contact from "./Contact";
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Home';
+import Contact from './Contact';
+import Navbar from './components/Navbar';
 
-export const StudentContext = createContext()
-
-function App() {
-
+const App = () => {
   return (
     <>
-      <h1>App.jsx</h1>
-
-      <StudentContext.Provider value="Aung Gyi">
-        <Home />
-      </StudentContext.Provider>
-
-      <About contact="09961537573" />
-
+      <h1>Welcome to React Router!</h1>
+      <Navbar/>
       <Routes>
+        <Route path="/home" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );
 }
 
-export default App;
+export default App
