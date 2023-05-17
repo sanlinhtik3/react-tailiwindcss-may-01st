@@ -15,7 +15,7 @@ export const authSlice = createSlice({
       state.number -= 1;
     },
     reset: (state, action) => {
-        console.log(action.payload)
+      console.log(action.payload)
       state.number = 0;
     }
   },
