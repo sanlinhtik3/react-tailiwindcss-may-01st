@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import Layout from './Layout';
+import { Route, Routes } from 'react-router-dom';
+import Main from './pages/Main';
+import CreatePost from './pages/CreatePost';
 
 const App = () => {
-
   return (
     <>
-      <Layout/>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/post/create" element={<CreatePost />} />
+      </Routes>
     </>
   );
 }

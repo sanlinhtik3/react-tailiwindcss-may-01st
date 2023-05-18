@@ -1,24 +1,10 @@
 import React from 'react'
 import Sidebar from './components/Sidebar';
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 
-const markdown = `A paragraph with *emphasis* and **strong importance**.
 
-> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
 
-* Lists
-* [ ] todo
-* [x] done
 
-A table:
-
-| a | b |
-| - | - |
-| apple | banan |
-`;
-
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <>
       <div className="grid grid-cols-12">
@@ -29,9 +15,7 @@ const Layout = () => {
 
         {/* cols-10 */}
         <div className="col-span-10 bg-slate-200 h-screen">
-          <div className="mx-auto prose">
-            <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />
-          </div>
+          {children}
         </div>
       </div>
     </>
