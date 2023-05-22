@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <>
       <div className="grid grid-cols-12">
         {/* cols-2 */}
-        <div className="col-span-2 bg-slate-400 h-screen">
+        <div className="col-span-2 bg-slate-100 h-screen">
           <Sidebar />
         </div>
 
